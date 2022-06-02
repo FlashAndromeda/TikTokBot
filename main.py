@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 
 nest_asyncio.apply()
 
-bot = commands.Bot(command_prefix='-tt', strip_after_prefix=True)
-api = TikTokApi(logging_level=logging.INFO)
+bot = commands.Bot(command_prefix='sat', strip_after_prefix=True)
+api = TikTokApi()
 
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
@@ -73,4 +73,3 @@ def setup(bot):
 
 setup(bot)
 bot.run(TOKEN)
-# https://discord.com/api/oauth2/authorize?client_id=981701817417228360&permissions=8&scope=bot%20applications.commands
